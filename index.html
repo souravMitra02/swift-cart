@@ -20,15 +20,21 @@
   <body>
     <!-- Header section -->
     <header>
-        <nav class="flex justify-evenly mt-3">
+        <nav class="flex  justify-between px-5 md:justify-evenly  lg:justify-evenly mt-3">
             <h3 class="text-xl text-blue-500 font-bold">SwiftCart</h3>
-            <ul class="flex justify-center  gap-5">
+            <ul class="md:flex lg:flex md:justify-center lg:justify-center hidden  gap-5">
+
                 <li class="hover:text-blue-500"><a href="">Home</a></li>
                 <li class="hover:text-blue-500"><a href="">Products</a></li>
                 <li class="hover:text-blue-500"><a href="">About</a></li>
                 <li class="hover:text-blue-500"><a href="">Contact</a></li>
             </ul>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="space-x-3 flex items-center">
+                <i class="fa-solid fa-cart-shopping"></i>
+            <div class="md:hidden flex items-center">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            </div>
         </nav>
     </header>
 
