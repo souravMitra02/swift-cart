@@ -20,9 +20,9 @@
   <body>
     <!-- Header section -->
     <header>
-        <nav class="flex  justify-between px-5 md:justify-evenly  lg:justify-evenly mt-3">
+        <nav class="flex  fixed z-20 bg-white w-full justify-between px-5 md:justify-evenly py-3">
             <h3 class="text-xl text-blue-500 font-bold">SwiftCart</h3>
-            <ul class="md:flex lg:flex md:justify-center lg:justify-center hidden  gap-5">
+            <ul class="md:flex  md:justify-center hidden  gap-5">
 
                 <li class="hover:text-blue-500"><a href="">Home</a></li>
                 <li class="hover:text-blue-500"><a href="">Products</a></li>
@@ -36,7 +36,94 @@
             </div>
             </div>
         </nav>
+        <!-- Banner Section -->
+<section class="relative h-[500px] w-full flex items-center">
+  
+  <img src="./Assets/banner-image.png" 
+       class="absolute inset-0 w-full h-full object-cover -z-10" 
+       alt="Banner">
+
+  <div class="absolute inset-0 bg-black/60 -z-10"></div>
+
+  <div class="container mx-auto px-10 md:px-40 mt-8 text-white justify-center ">
+      <h1 class=" text-2.xl md:text-5xl font-bold mb-4 ">Best Collection For You</h1>
+      <p class="max-w-md mb-6 text-gray-200">
+       Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart.
+      </p>
+      <button class="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        Shop Now
+      </button>
+  </div>
+
+</section>
     </header>
+
+    <!-- main section -->
+     <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 lg:px-20">
+        
+        <div class="text-center mb-20">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Why Choose Us</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg">
+                We provide the best shopping experience with top-notch services.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16">
+            
+            <div class="relative p-8 pt-14 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 bg-white group">
+                <div class="absolute -top-7 left-8 w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-md border border-gray-50">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-bold text-gray-900 mb-3 whitespace-nowrap">Fast Delivery</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Get your orders delivered to your doorstep quickly and efficiently.
+                </p>
+            </div>
+
+            <div class="relative p-8 pt-14 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 bg-white group">
+                <div class="absolute -top-7 left-8 w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-md border border-gray-50">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3 whitespace-nowrap">24/7 Support</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Our support team is available around the clock to assist you.
+                </p>
+            </div>
+
+            <div class="relative p-8 pt-14 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 bg-white group">
+                <div class="absolute -top-7 left-8 w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-md border border-gray-50">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3 whitespace-nowrap">Secure Payment</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Experience safe and secure transactions with our encrypted payment systems.
+                </p>
+            </div>
+
+            <div class="relative p-8 pt-14 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 bg-white group">
+                <div class="absolute -top-7 left-8 w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-md border border-gray-50">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-3 whitespace-nowrap">Easy Returns</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Not satisfied? Return your products easily within 30 days.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 
     <!-- script connect file -->
