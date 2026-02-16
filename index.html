@@ -10,6 +10,9 @@
     <!--font awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!--google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,7 +128,70 @@
 </section>
 
 
+<!-- footer section -->
+ <footer class="bg-[#1e293b] text-gray-400 py-16 px-6 lg:px-20">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-blue-500">SwiftCart</h2>
+                <p class="text-sm leading-relaxed max-w-xs">
+                    Your one-stop shop for all your fashion and lifestyle needs. Quality products, fast delivery, and excellent support.
+                </p>
+            </div>
 
+            <div>
+                <h6 class="text-white font-bold mb-6">QUICK LINKS</h6>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#" class="hover:text-white transition">Products</a></li>
+                    <li><a href="#" class="hover:text-white transition">About</a></li>
+                    <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h6 class="text-white font-bold mb-6">SUPPORT</h6>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                    <li><a href="#" class="hover:text-white transition">Shipping</a></li>
+                    <li><a href="#" class="hover:text-white transition">Returns</a></li>
+                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h6 class="text-white font-bold mb-6 uppercase">Subscribe to our newsletter</h6>
+                <p class="text-sm mb-6">
+                    The latest news, articles, and resources, sent to your inbox weekly.
+                </p>
+               <div class="flex items-center gap-2">
+    <input type="email" 
+           placeholder="Enter your email" 
+           class="bg-white text-gray-900 px-2 text-sm py-2 rounded-lg focus:outline-none  md:w-32 border-none outline-none w-full">
+    
+    <button class="bg-[#5c4df2] hover:bg-blue-700 text-white px-2 py-2 rounded-lg text-sm transition border-none outline-none">
+        Subscribe
+    </button>
+</div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-sm text-gray-500">
+                © 2025 SwiftCart, Inc. All rights reserved.
+            </p>
+            
+            <div class="flex gap-6 text-xl">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
     <!-- script connect file -->
      <script src="script.js"></script>
   </body>
