@@ -189,8 +189,6 @@ const loadProductDetails = (id) => {
 const displayProductDetails = (product) => {
     console.log(product);
     const modalContent = document.getElementById('modal-content');
-
-    // মোডালের ভেতরের ডিজাইন সাজানো
     modalContent.innerHTML = `
         <div class="flex flex-col md:flex-row gap-8 mt-4">
             <div class="flex-1 bg-gray-50 rounded-2xl p-6 flex items-center justify-center">
