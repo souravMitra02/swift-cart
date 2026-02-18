@@ -248,6 +248,28 @@
             </div>
         </div>
     </footer>
+
+
+    <dialog id="product_details_modal" class="modal modal-bottom sm:modal-middle">
+    <div class="modal-box max-w-3xl bg-white relative">
+        <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </form>
+
+        <div id="modal-content">
+            </div>
+
+        <div class="modal-action border-t pt-4">
+            <form method="dialog">
+                <button class="btn btn-error text-white px-8">Close</button>
+            </form>
+        </div>
+    </div>
+    
+    <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+    </form>
+</dialog>
     <!-- script connect file -->
     <script src="script.js"></script>
 </body>

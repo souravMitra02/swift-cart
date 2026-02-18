@@ -19,6 +19,7 @@ productsLink.addEventListener('click', (e) => {
     productsSection.classList.remove('hidden')
     bannerSection.classList.add('hidden')
     homeSection.classList.add('hidden')
+    allCategory()
 
 })
 
@@ -75,7 +76,7 @@ const displayTrendProducts = (products) => {
     </div>
 
     <div class="flex gap-3 px-1 pb-1">
-        <button class="flex-1 py-3 border border-gray-200 rounded-xl text-gray-700 font-bold text-[13px] flex items-center justify-center gap-2 hover:bg-gray-50 transition">
+        <button onClick="loadProductDetails(${product.id})" class="flex-1 py-3 border border-gray-200 rounded-xl text-gray-700 font-bold text-[13px] flex items-center justify-center gap-2 hover:bg-gray-50 transition">
             <i class="fa-regular fa-eye text-sm text-gray-500"></i> Details
         </button>
         <button class="flex-1 py-3 bg-[#5c4df2] text-white rounded-xl font-bold text-[13px] flex items-center justify-center gap-2 hover:bg-[#4a3ddb] transition shadow-sm">
@@ -164,7 +165,7 @@ const displayAllProducts = (category) => {
     </div>
 
     <div class="flex gap-3 px-1 pb-1">
-        <button class="flex-1 py-3 border border-gray-200 rounded-xl text-gray-700 font-bold text-[13px] flex items-center justify-center gap-2 hover:bg-gray-50 transition">
+        <button onClick="loadProductDetails(${cate.id})" class="flex-1 py-3 border border-gray-200 rounded-xl text-gray-700 font-bold text-[13px] flex items-center justify-center gap-2 hover:bg-gray-50 transition">
             <i class="fa-regular fa-eye text-sm text-gray-500"></i> Details
         </button>
         <button class="flex-1 py-3 bg-[#5c4df2] text-white rounded-xl font-bold text-[13px] flex items-center justify-center gap-2 hover:bg-[#4a3ddb] transition shadow-sm">
@@ -176,14 +177,73 @@ const displayAllProducts = (category) => {
 
 }
 
+
+const loadProductDetails = (id) => {
+    console.log(id);
+    fetch(`https://fakestoreapi.com/products/${id}`)
+        .then(res => res.json())
+    .then(data=>displayProductDetails(data))
+}
+
+
+const displayProductDetails = (product) => {
+    console.log(product);
+    const modalContent = document.getElementById('modal-content');
+
+    // মোডালের ভেতরের ডিজাইন সাজানো
+    modalContent.innerHTML = `
+        <div class="flex flex-col md:flex-row gap-8 mt-4">
+            <div class="flex-1 bg-gray-50 rounded-2xl p-6 flex items-center justify-center">
+                <img src="${product.image}" alt="${product.title}" class="max-h-72 object-contain mix-blend-multiply transition-transform hover:scale-105 duration-500">
+            </div>
+
+            <div class="flex-1 space-y-4">
+                <div>
+                    <span class="bg-indigo-100 text-indigo-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                        ${product.category}
+                    </span>
+                    <h3 class="text-2xl font-black text-gray-800 mt-2 leading-tight">${product.title}</h3>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-1 text-yellow-400 font-bold">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-gray-700">${product.rating.rate}</span>
+                    </div>
+                    <span class="text-gray-400 text-sm font-medium border-l pl-3">
+                        ${product.rating.count} Customer Reviews
+                    </span>
+                </div>
+
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    ${product.description}
+                </p>
+
+                <div class="bg-gray-50 p-4 rounded-xl flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-400 text-xs font-bold uppercase">Total Price</p>
+                        <p class="text-3xl font-black text-indigo-600">$${product.price}</p>
+                    </div>
+                    <button class="btn bg-indigo-600 hover:bg-indigo-700 text-white border-none px-6">
+                        <i class="fa-solid fa-cart-plus"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    const modal = document.getElementById('product_details_modal');
+    modal.showModal();
+}
+
+
+
+
 const loadProductsByCategory = (category) => {
     console.log(category);
     fetch(`https://fakestoreapi.com/products/category/${category}`)
         .then(res => res.json())
     .then(data=>displayAllProducts(data))
 }
-
-
 
 
 
